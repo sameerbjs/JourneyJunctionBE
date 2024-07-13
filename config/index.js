@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.SERVER_PORT;
 const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 const ACCESS_TOKEN_SECRET_KEY = process.env.ACCESS_TOKEN_SECRET_KEY;
 
