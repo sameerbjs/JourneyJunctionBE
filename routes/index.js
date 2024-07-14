@@ -17,3 +17,4 @@ router.put("/update-profile/:id", authenticateToken, authController.updateProfil
 
 //for travel
 router.post("/create-travel", authenticateToken, travelController.createTravel);
+router.get("/user-travels/:userId", authenticateToken, travelController.getUserTravel);

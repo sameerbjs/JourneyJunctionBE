@@ -37,5 +37,19 @@ export const travelController = {
         } catch (error) {
             return next(error);
         }
+    },
+
+    async getUserTravel(req, res, next) {
+        const { userId } = req.params;
+
+        try {
+            const travels = await Travel.find({ user: userId }).populate('user','full_name email profile_img _id country state');
+            return res
+                .status(200)
+                .json({ travels: travels });
+
+        } catch (error) {
+            return next(error);
+        }
     }
 };
